@@ -1,0 +1,33 @@
+<h2>Program to Swap Numbers Using Temporary Variable</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+      <span class="kwd">double</span><span class="pln"> firstNumber</span><span class="pun">,</span><span class="pln"> secondNumber</span><span class="pun">,</span><span class="pln"> temporaryVariable</span><span class="pun">;</span><span class="pln">
+
+      printf</span><span class="pun">(</span><span class="str">"Enter first number: "</span><span class="pun">);</span><span class="pln">
+      scanf</span><span class="pun">(</span><span class="str">"%lf"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">firstNumber</span><span class="pun">);</span><span class="pln">
+
+      printf</span><span class="pun">(</span><span class="str">"Enter second number: "</span><span class="pun">);</span><span class="pln">
+      scanf</span><span class="pun">(</span><span class="str">"%lf"</span><span class="pun">,&amp;</span><span class="pln">secondNumber</span><span class="pun">);</span>
+
+      <span class="com">// Value of firstNumber is assigned to temporaryVariable</span><span class="pln">
+      temporaryVariable </span><span class="pun">=</span><span class="pln"> firstNumber</span><span class="pun">;</span>
+
+      <span class="com">// Value of secondNumber is assigned to firstNumber</span><span class="pln">
+      firstNumber </span><span class="pun">=</span><span class="pln"> secondNumber</span><span class="pun">;</span>
+
+      <span class="com">// Value of temporaryVariable (which contains the initial value of firstNumber) is assigned to secondNumber</span><span class="pln">
+      secondNumber </span><span class="pun">=</span><span class="pln"> temporaryVariable</span><span class="pun">;</span><span class="pln">
+
+      printf</span><span class="pun">(</span><span class="str">"\nAfter swapping, firstNumber = %.2lf\n"</span><span class="pun">,</span><span class="pln"> firstNumber</span><span class="pun">);</span><span class="pln">
+      printf</span><span class="pun">(</span><span class="str">"After swapping, secondNumber = %.2lf"</span><span class="pun">,</span><span class="pln"> secondNumber</span><span class="pun">);</span>
+
+      <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span>
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter first number: 1.20
+Enter second number: 2.45
+
+After swapping, firstNumber = 2.45
+After swapping, secondNumber = 1.20</samp></pre>

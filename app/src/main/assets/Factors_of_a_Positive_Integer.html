@@ -1,0 +1,23 @@
+<h2>Factors of a Positive Integer</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> number</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a positive integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Factors of %d are: "</span><span class="pun">,</span><span class="pln"> number</span><span class="pun">);</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> number</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+    <span class="pun">{</span>
+        <span class="kwd">if</span> <span class="pun">(</span><span class="pln">number</span><span class="pun">%</span><span class="pln">i </span><span class="pun">==</span> <span class="lit">0</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%d "</span><span class="pun">,</span><span class="pln">i</span><span class="pun">);</span>
+        <span class="pun">}</span>
+    <span class="pun">}</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a positive integer: 60
+Factors of 60 are: 1 2 3 4 5 6 10 12 15 20 30 60</samp></pre>

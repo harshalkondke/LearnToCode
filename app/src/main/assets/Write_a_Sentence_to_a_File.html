@@ -1,0 +1,26 @@
+<h1>Write a Sentence to a File</h1>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="com">#include</span> <span class="str">&lt;stdlib.h&gt;</span>  <span class="com">/* For exit() function */</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+   <span class="kwd">char</span><span class="pln"> sentence</span><span class="pun">[</span><span class="lit">1000</span><span class="pun">];</span><span class="pln">
+   FILE </span><span class="pun">*</span><span class="pln">fptr</span><span class="pun">;</span><span class="pln">
+
+   fptr </span><span class="pun">=</span><span class="pln"> fopen</span><span class="pun">(</span><span class="str">"program.txt"</span><span class="pun">,</span> <span class="str">"w"</span><span class="pun">);</span>
+   <span class="kwd">if</span><span class="pun">(</span><span class="pln">fptr </span><span class="pun">==</span><span class="pln"> NULL</span><span class="pun">)</span>
+   <span class="pun">{</span><span class="pln">
+      printf</span><span class="pun">(</span><span class="str">"Error!"</span><span class="pun">);</span>
+      <span class="kwd">exit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span>
+   <span class="pun">}</span><span class="pln">
+   
+   printf</span><span class="pun">(</span><span class="str">"Enter a sentence:\n"</span><span class="pun">);</span><span class="pln">
+   gets</span><span class="pun">(</span><span class="pln">sentence</span><span class="pun">);</span><span class="pln">
+
+   fprintf</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">,</span><span class="str">"%s"</span><span class="pun">,</span><span class="pln"> sentence</span><span class="pun">);</span><span class="pln">
+   fclose</span><span class="pun">(</span><span class="pln">fptr</span><span class="pun">);</span>
+
+   <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter sentence: 
+I am awesome and so are files.</samp></pre>

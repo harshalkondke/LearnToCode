@@ -1,0 +1,25 @@
+<h2>Check if a Number is Positive or Negative Using if...else</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">double</span><span class="pln"> number</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a number: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">number</span><span class="pun">);</span>
+
+    <span class="kwd">if</span> <span class="pun">(</span><span class="pln">number </span><span class="pun">&lt;=</span> <span class="lit">0.0</span><span class="pun">)</span>
+    <span class="pun">{</span>
+        <span class="kwd">if</span> <span class="pun">(</span><span class="pln">number </span><span class="pun">==</span> <span class="lit">0.0</span><span class="pun">)</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"You entered 0."</span><span class="pun">);</span>
+        <span class="kwd">else</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"You entered a negative number."</span><span class="pun">);</span>
+    <span class="pun">}</span>
+    <span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"You entered a positive number."</span><span class="pun">);</span>
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}<br /><br /><br /></span></code></pre>
+<p><strong>Output 1</strong></p>
+<pre class="prettyprint prettyprinted"><code></code></pre>
+<pre><samp>Enter a number: 12.3
+You entered a positive number.</samp></pre>
+<pre class="prettyprint prettyprinted"><code></code></pre>

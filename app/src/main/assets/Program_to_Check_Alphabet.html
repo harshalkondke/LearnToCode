@@ -1,0 +1,18 @@
+<h2>Program to Check Alphabet</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">char</span><span class="pln"> c</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Enter a character: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%c"</span><span class="pun">,&amp;</span><span class="pln">c</span><span class="pun">);</span>
+
+    <span class="kwd">if</span><span class="pun">(</span> <span class="pun">(</span><span class="pln">c</span><span class="pun">&gt;=</span><span class="str">'a'</span> <span class="pun">&amp;&amp;</span><span class="pln"> c</span><span class="pun">&lt;=</span><span class="str">'z'</span><span class="pun">)</span> <span class="pun">||</span> <span class="pun">(</span><span class="pln">c</span><span class="pun">&gt;=</span><span class="str">'A'</span> <span class="pun">&amp;&amp;</span><span class="pln"> c</span><span class="pun">&lt;=</span><span class="str">'Z'</span><span class="pun">))</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%c is an alphabet."</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span>
+    <span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%c is not an alphabet."</span><span class="pun">,</span><span class="pln">c</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a character: *
+* is not an alphabet</samp></pre>

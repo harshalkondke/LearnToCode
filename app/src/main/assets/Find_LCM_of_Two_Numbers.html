@@ -1,0 +1,28 @@
+<h2>LCM using while Loop and if Statement</h2>
+<pre class="prettyprint prettyprinted"><code>
+<span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> minMultiple</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Enter two positive integers: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n1</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n2</span><span class="pun">);</span>
+
+    <span class="com">// maximum number between n1 and n2 is stored in minMultiple</span><span class="pln">
+    minMultiple </span><span class="pun">=</span> <span class="pun">(</span><span class="pln">n1</span><span class="pun">&gt;</span><span class="pln">n2</span><span class="pun">)</span> <span class="pun">?</span><span class="pln"> n1 </span><span class="pun">:</span><span class="pln"> n2</span><span class="pun">;</span>
+
+    <span class="com">// Always true</span>
+    <span class="kwd">while</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)</span>
+    <span class="pun">{</span>
+        <span class="kwd">if</span><span class="pun">(</span><span class="pln"> minMultiple</span><span class="pun">%</span><span class="pln">n1</span><span class="pun">==</span><span class="lit">0</span> <span class="pun">&amp;&amp;</span><span class="pln"> minMultiple</span><span class="pun">%</span><span class="pln">n2</span><span class="pun">==</span><span class="lit">0</span> <span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"The LCM of %d and %d is %d."</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln">minMultiple</span><span class="pun">);</span>
+            <span class="kwd">break</span><span class="pun">;</span>
+        <span class="pun">}</span>
+        <span class="pun">++</span><span class="pln">minMultiple</span><span class="pun">;</span>
+    <span class="pun">}</span>
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter two positive integers: 72
+120
+The LCM of 72 and 120 is 360.</samp></pre>

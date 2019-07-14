@@ -1,0 +1,46 @@
+<h2>#1: GCD Using for loop and if Statement</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> gcd</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter two integers: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n1</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n2</span><span class="pun">);</span>
+
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> n1 </span><span class="pun">&amp;&amp;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> n2</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+    <span class="pun">{</span>
+        <span class="com">// Checks if i is factor of both integers</span>
+        <span class="kwd">if</span><span class="pun">(</span><span class="pln">n1</span><span class="pun">%</span><span class="pln">i</span><span class="pun">==</span><span class="lit">0</span> <span class="pun">&amp;&amp;</span><span class="pln"> n2</span><span class="pun">%</span><span class="pln">i</span><span class="pun">==</span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+            gcd </span><span class="pun">=</span><span class="pln"> i</span><span class="pun">;</span>
+    <span class="pun">}</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"G.C.D of %d and %d is %d"</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> gcd</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}<br /><br /><br /></span></code></pre>
+<h2>#2: GCD&nbsp;Using while loop and if...else Statement</h2>
+<pre class="prettyprint prettyprinted"><code></code></pre>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">;</span><span class="pln">
+    
+    printf</span><span class="pun">(</span><span class="str">"Enter two positive integers: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,&amp;</span><span class="pln">n1</span><span class="pun">,&amp;</span><span class="pln">n2</span><span class="pun">);</span>
+
+    <span class="kwd">while</span><span class="pun">(</span><span class="pln">n1</span><span class="pun">!=</span><span class="pln">n2</span><span class="pun">)</span>
+    <span class="pun">{</span>
+        <span class="kwd">if</span><span class="pun">(</span><span class="pln">n1 </span><span class="pun">&gt;</span><span class="pln"> n2</span><span class="pun">)</span><span class="pln">
+            n1 </span><span class="pun">-=</span><span class="pln"> n2</span><span class="pun">;</span>
+        <span class="kwd">else</span><span class="pln">
+            n2 </span><span class="pun">-=</span><span class="pln"> n1</span><span class="pun">;</span>
+    <span class="pun">}</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"GCD = %d"</span><span class="pun">,</span><span class="pln">n1</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code><br /><br /><br /><br /><br /></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter two positive integers: 81
+153
+GCD = 9</samp></pre>
+<pre class="prettyprint prettyprinted"><code></code></pre>

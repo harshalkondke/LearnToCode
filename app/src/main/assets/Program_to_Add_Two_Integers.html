@@ -1,0 +1,23 @@
+<h2>Program to Add Two Integers</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> firstNumber</span><span class="pun">,</span><span class="pln"> secondNumber</span><span class="pun">,</span><span class="pln"> sumOfTwoNumbers</span><span class="pun">;</span><span class="pln">
+    
+    printf</span><span class="pun">(</span><span class="str">"Enter two integers: "</span><span class="pun">);</span>
+
+    <span class="com">// Two integers entered by user is stored using scanf() function</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">firstNumber</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">secondNumber</span><span class="pun">);</span>
+
+    <span class="com">// sum of two numbers in stored in variable sumOfTwoNumbers</span><span class="pln">
+    sumOfTwoNumbers </span><span class="pun">=</span><span class="pln"> firstNumber </span><span class="pun">+</span><span class="pln"> secondNumber</span><span class="pun">;</span>
+
+    <span class="com">// Displays sum      </span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"%d + %d = %d"</span><span class="pun">,</span><span class="pln"> firstNumber</span><span class="pun">,</span><span class="pln"> secondNumber</span><span class="pun">,</span><span class="pln"> sumOfTwoNumbers</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter two integers: 12
+11
+12 + 11 = 23</samp></pre>

@@ -1,0 +1,28 @@
+<h2>Program to Compute Quotient and Remainder</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">(){</span>
+
+    <span class="kwd">int</span><span class="pln"> dividend</span><span class="pun">,</span><span class="pln"> divisor</span><span class="pun">,</span><span class="pln"> quotient</span><span class="pun">,</span><span class="pln"> remainder</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter dividend: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">dividend</span><span class="pun">);</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter divisor: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">divisor</span><span class="pun">);</span>
+
+    <span class="com">// Computes quotient</span><span class="pln">
+    quotient </span><span class="pun">=</span><span class="pln"> dividend </span><span class="pun">/</span><span class="pln"> divisor</span><span class="pun">;</span>
+
+    <span class="com">// Computes remainder</span><span class="pln">
+    remainder </span><span class="pun">=</span><span class="pln"> dividend </span><span class="pun">%</span><span class="pln"> divisor</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Quotient = %d\n"</span><span class="pun">,</span><span class="pln"> quotient</span><span class="pun">);</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Remainder = %d"</span><span class="pun">,</span><span class="pln"> remainder</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre>Enter dividend: 25
+Enter divisor: 4
+Quotient = 6
+Remainder = 1</pre>

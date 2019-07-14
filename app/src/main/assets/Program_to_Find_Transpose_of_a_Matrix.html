@@ -1,0 +1,72 @@
+<h2>Program to Find Transpose of a Matrix</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">10</span><span class="pun">][</span><span class="lit">10</span><span class="pun">],</span><span class="pln"> transpose</span><span class="pun">[</span><span class="lit">10</span><span class="pun">][</span><span class="lit">10</span><span class="pun">],</span><span class="pln"> r</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Enter rows and columns of matrix: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">r</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">c</span><span class="pun">);</span>
+
+    <span class="com">// Storing elements of the matrix</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"\nEnter elements of matrix:\n"</span><span class="pun">);</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">r</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">c</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"Enter element a%d%d: "</span><span class="pun">,</span><span class="pln">i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+            scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span>
+        <span class="pun">}</span>
+
+    <span class="com">// Displaying the matrix a[][] */</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"\nEntered Matrix: \n"</span><span class="pun">);</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">r</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">c</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%d  "</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span>
+            <span class="kwd">if</span> <span class="pun">(</span><span class="pln">j </span><span class="pun">==</span><span class="pln"> c</span><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+                printf</span><span class="pun">(</span><span class="str">"\n\n"</span><span class="pun">);</span>
+        <span class="pun">}</span>
+
+    <span class="com">// Finding the transpose of matrix a</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">r</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">c</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            transpose</span><span class="pun">[</span><span class="pln">j</span><span class="pun">][</span><span class="pln">i</span><span class="pun">]</span> <span class="pun">=</span><span class="pln"> a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">];</span>
+        <span class="pun">}</span>
+
+    <span class="com">// Displaying the transpose of matrix a</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"\nTranspose of Matrix:\n"</span><span class="pun">);</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">c</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">r</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%d  "</span><span class="pun">,</span><span class="pln">transpose</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span>
+            <span class="kwd">if</span><span class="pun">(</span><span class="pln">j</span><span class="pun">==</span><span class="pln">r</span><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+                printf</span><span class="pun">(</span><span class="str">"\n\n"</span><span class="pun">);</span>
+        <span class="pun">}</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span>
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter rows and columns of matrix: 2
+3
+
+Enter element of matrix:
+Enter element a11: 2
+Enter element a12: 3
+Enter element a13: 4
+Enter element a21: 5
+Enter element a22: 6
+Enter element a23: 4
+
+Entered Matrix: 
+2  3  4  
+
+5  6  4  
+
+
+Transpose of Matrix:
+2  5  
+
+3  6  
+
+4  4  </samp></pre>

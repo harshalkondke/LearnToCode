@@ -1,0 +1,27 @@
+<h2>GCD of Two Numbers using Recursion</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> hcf</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span> <span class="kwd">int</span><span class="pln"> n2</span><span class="pun">);</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+   <span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">;</span><span class="pln">
+   printf</span><span class="pun">(</span><span class="str">"Enter two positive integers: "</span><span class="pun">);</span><span class="pln">
+   scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n1</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n2</span><span class="pun">);</span><span class="pln">
+
+   printf</span><span class="pun">(</span><span class="str">"G.C.D of %d and %d is %d."</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> hcf</span><span class="pun">(</span><span class="pln">n1</span><span class="pun">,</span><span class="pln">n2</span><span class="pun">));</span>
+   <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span>
+
+<span class="kwd">int</span><span class="pln"> hcf</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> n1</span><span class="pun">,</span> <span class="kwd">int</span><span class="pln"> n2</span><span class="pun">)</span>
+<span class="pun">{</span>
+    <span class="kwd">if</span> <span class="pun">(</span><span class="pln">n2 </span><span class="pun">!=</span> <span class="lit">0</span><span class="pun">)</span>
+       <span class="kwd">return</span><span class="pln"> hcf</span><span class="pun">(</span><span class="pln">n2</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">%</span><span class="pln">n2</span><span class="pun">);</span>
+    <span class="kwd">else</span> 
+       <span class="kwd">return</span><span class="pln"> n1</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p>&nbsp;</p>
+<div id="block-inject-1" class="block-inject block-inject-1">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+<p><strong>Output</strong></p>
+<pre><samp>Enter two positive integers: 366
+60
+G.C.D of 366 and 60 is 6.</samp></pre>

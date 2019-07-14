@@ -1,0 +1,50 @@
+<h2>Program to Find Roots of a Quadratic Equation</h2>
+<pre class="prettyprint prettyprinted"><code>
+<span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="com">#include</span> <span class="str">&lt;math.h&gt;</span>
+
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">double</span><span class="pln"> a</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">,</span><span class="pln"> discriminant</span><span class="pun">,</span><span class="pln"> root1</span><span class="pun">,</span><span class="pln"> root2</span><span class="pun">,</span><span class="pln"> realPart</span><span class="pun">,</span><span class="pln"> imaginaryPart</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter coefficients a, b and c: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf %lf %lf"</span><span class="pun">,&amp;</span><span class="pln">a</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">b</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">c</span><span class="pun">);</span><span class="pln">
+
+    discriminant </span><span class="pun">=</span><span class="pln"> b</span><span class="pun">*</span><span class="pln">b</span><span class="pun">-</span><span class="lit">4</span><span class="pun">*</span><span class="pln">a</span><span class="pun">*</span><span class="pln">c</span><span class="pun">;</span>
+
+    <span class="com">// condition for real and different roots</span>
+    <span class="kwd">if</span> <span class="pun">(</span><span class="pln">discriminant </span><span class="pun">&gt;</span> <span class="lit">0</span><span class="pun">)</span>
+    <span class="pun">{</span>
+    <span class="com">// sqrt() function returns square root</span><span class="pln">
+        root1 </span><span class="pun">=</span> <span class="pun">(-</span><span class="pln">b</span><span class="pun">+</span><span class="pln">sqrt</span><span class="pun">(</span><span class="pln">discriminant</span><span class="pun">))/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+        root2 </span><span class="pun">=</span> <span class="pun">(-</span><span class="pln">b</span><span class="pun">-</span><span class="pln">sqrt</span><span class="pun">(</span><span class="pln">discriminant</span><span class="pun">))/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+
+        printf</span><span class="pun">(</span><span class="str">"root1 = %.2lf and root2 = %.2lf"</span><span class="pun">,</span><span class="pln">root1 </span><span class="pun">,</span><span class="pln"> root2</span><span class="pun">);</span>
+    <span class="pun">}</span>
+
+    <span class="com">//condition for real and equal roots</span>
+    <span class="kwd">else</span> <span class="kwd">if</span> <span class="pun">(</span><span class="pln">discriminant </span><span class="pun">==</span> <span class="lit">0</span><span class="pun">)</span>
+    <span class="pun">{</span><span class="pln">
+        root1 </span><span class="pun">=</span><span class="pln"> root2 </span><span class="pun">=</span> <span class="pun">-</span><span class="pln">b</span><span class="pun">/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+
+        printf</span><span class="pun">(</span><span class="str">"root1 = root2 = %.2lf;"</span><span class="pun">,</span><span class="pln"> root1</span><span class="pun">);</span>
+    <span class="pun">}</span>
+
+    <span class="com">// if roots are not real </span>
+    <span class="kwd">else</span>
+    <span class="pun">{</span><span class="pln">
+        realPart </span><span class="pun">=</span> <span class="pun">-</span><span class="pln">b</span><span class="pun">/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+        imaginaryPart </span><span class="pun">=</span><span class="pln"> sqrt</span><span class="pun">(-</span><span class="pln">discriminant</span><span class="pun">)/(</span><span class="lit">2</span><span class="pun">*</span><span class="pln">a</span><span class="pun">);</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi"</span><span class="pun">,</span><span class="pln"> realPart</span><span class="pun">,</span><span class="pln"> imaginaryPart</span><span class="pun">,</span><span class="pln"> realPart</span><span class="pun">,</span><span class="pln"> imaginaryPart</span><span class="pun">);</span>
+    <span class="pun">}</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span>   </code></pre>
+<p>&nbsp;</p>
+<div id="block-inject-1" class="block-inject block-inject-1">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+<p><strong>Output&nbsp;</strong></p>
+<pre><samp>Enter coefficients a, b and c: 2.3
+4
+5.6
+Roots are: -0.87+1.30i and -0.87-1.30i</samp></pre>

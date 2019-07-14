@@ -1,0 +1,28 @@
+<h2>Factorial of a Number</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">;</span>
+    <span class="kwd">unsigned</span> <span class="kwd">long</span> <span class="kwd">long</span><span class="pln"> factorial </span><span class="pun">=</span> <span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">n</span><span class="pun">);</span>
+
+    <span class="com">// show error if the user enters a negative integer</span>
+    <span class="kwd">if</span> <span class="pun">(</span><span class="pln">n </span><span class="pun">&lt;</span> <span class="lit">0</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Error! Factorial of a negative number doesn't exist."</span><span class="pun">);</span>
+
+    <span class="kwd">else</span>
+    <span class="pun">{</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;=</span><span class="pln">n</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            factorial </span><span class="pun">*=</span><span class="pln"> i</span><span class="pun">;</span>              <span class="com">// factorial = factorial*i;</span>
+        <span class="pun">}</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Factorial of %d = %llu"</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> factorial</span><span class="pun">);</span>
+    <span class="pun">}</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre>Enter an integer: 10
+Factorial of 10 = 3628800</pre>

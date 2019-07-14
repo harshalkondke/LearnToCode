@@ -1,0 +1,28 @@
+<h2>Check Armstrong Number&nbsp;</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> number</span><span class="pun">,</span><span class="pln"> originalNumber</span><span class="pun">,</span><span class="pln"> remainder</span><span class="pun">,</span><span class="pln"> result </span><span class="pun">=</span> <span class="lit">0</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a three digit integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">number</span><span class="pun">);</span><span class="pln">
+
+    originalNumber </span><span class="pun">=</span><span class="pln"> number</span><span class="pun">;</span>
+
+    <span class="kwd">while</span> <span class="pun">(</span><span class="pln">originalNumber </span><span class="pun">!=</span> <span class="lit">0</span><span class="pun">)</span>
+    <span class="pun">{</span><span class="pln">
+        remainder </span><span class="pun">=</span><span class="pln"> originalNumber</span><span class="pun">%</span><span class="lit">10</span><span class="pun">;</span><span class="pln">
+        result </span><span class="pun">+=</span><span class="pln"> remainder</span><span class="pun">*</span><span class="pln">remainder</span><span class="pun">*</span><span class="pln">remainder</span><span class="pun">;</span><span class="pln">
+        originalNumber </span><span class="pun">/=</span> <span class="lit">10</span><span class="pun">;</span>
+    <span class="pun">}</span>
+
+    <span class="kwd">if</span><span class="pun">(</span><span class="pln">result </span><span class="pun">==</span><span class="pln"> number</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is an Armstrong number."</span><span class="pun">,</span><span class="pln">number</span><span class="pun">);</span>
+    <span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is not an Armstrong number."</span><span class="pun">,</span><span class="pln">number</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter a three digit integer: 371
+371 is an Armstrong number.</samp></pre>

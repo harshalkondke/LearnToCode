@@ -1,0 +1,18 @@
+<h2>Program to Print ASCII Value</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">char</span><span class="pln"> c</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Enter a character: "</span><span class="pun">);</span>
+
+    <span class="com">// Reads character input from the user</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%c"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">c</span><span class="pun">);</span>  
+    
+    <span class="com">// %d displays the integer value of a character</span>
+    <span class="com">// %c displays the actual character</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"ASCII value of %c = %d"</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">);</span>
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre>Enter a character: G
+ASCII value of G = 71</pre>

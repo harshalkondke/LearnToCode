@@ -1,0 +1,28 @@
+<h2>Multiplication Table Up to 10</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">n</span><span class="pun">);</span>
+
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">1</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;=</span><span class="lit">10</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+    <span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d * %d = %d \n"</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> n</span><span class="pun">*</span><span class="pln">i</span><span class="pun">);</span>
+    <span class="pun">}</span>
+    
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter an integer: 9
+9 * 1 = 9
+9 * 2 = 18
+9 * 3 = 27
+9 * 4 = 36
+9 * 5 = 45
+9 * 6 = 54
+9 * 7 = 63
+9 * 8 = 72
+9 * 9 = 81
+9 * 10 = 90</samp></pre>

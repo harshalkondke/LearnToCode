@@ -1,0 +1,100 @@
+<h2>Program to Multiply Two Matrices</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">10</span><span class="pun">][</span><span class="lit">10</span><span class="pun">],</span><span class="pln"> b</span><span class="pun">[</span><span class="lit">10</span><span class="pun">][</span><span class="lit">10</span><span class="pun">],</span><span class="pln"> result</span><span class="pun">[</span><span class="lit">10</span><span class="pun">][</span><span class="lit">10</span><span class="pun">],</span><span class="pln"> r1</span><span class="pun">,</span><span class="pln"> c1</span><span class="pun">,</span><span class="pln"> r2</span><span class="pun">,</span><span class="pln"> c2</span><span class="pun">,</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">,</span><span class="pln"> k</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter rows and column for first matrix: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">r1</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">c1</span><span class="pun">);</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter rows and column for second matrix: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,&amp;</span><span class="pln">r2</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">c2</span><span class="pun">);</span>
+
+    <span class="com">// Column of first matrix should be equal to column of second matrix and</span>
+    <span class="kwd">while</span> <span class="pun">(</span><span class="pln">c1 </span><span class="pun">!=</span><span class="pln"> r2</span><span class="pun">)</span>
+    <span class="pun">{</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Error! column of first matrix not equal to row of second.\n\n"</span><span class="pun">);</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Enter rows and column for first matrix: "</span><span class="pun">);</span><span class="pln">
+        scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">r1</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">c1</span><span class="pun">);</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"Enter rows and column for second matrix: "</span><span class="pun">);</span><span class="pln">
+        scanf</span><span class="pun">(</span><span class="str">"%d %d"</span><span class="pun">,&amp;</span><span class="pln">r2</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">c2</span><span class="pun">);</span>
+    <span class="pun">}</span>
+
+    <span class="com">// Storing elements of first matrix.</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"\nEnter elements of matrix 1:\n"</span><span class="pun">);</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">r1</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">c1</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"Enter elements a%d%d: "</span><span class="pun">,</span><span class="pln">i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+            scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span>
+        <span class="pun">}</span>
+
+    <span class="com">// Storing elements of second matrix.</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"\nEnter elements of matrix 2:\n"</span><span class="pun">);</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">r2</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">c2</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"Enter elements b%d%d: "</span><span class="pun">,</span><span class="pln">i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+            scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">b</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span>
+        <span class="pun">}</span>
+
+    <span class="com">// Initializing all elements of result matrix to 0</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">r1</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">c2</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            result</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]</span> <span class="pun">=</span> <span class="lit">0</span><span class="pun">;</span>
+        <span class="pun">}</span>
+
+    <span class="com">// Multiplying matrices a and b and</span>
+    <span class="com">// storing result in result matrix</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">r1</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">c2</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+            <span class="kwd">for</span><span class="pun">(</span><span class="pln">k</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> k</span><span class="pun">&lt;</span><span class="pln">c1</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">k</span><span class="pun">)</span>
+            <span class="pun">{</span><span class="pln">
+                result</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]+=</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">k</span><span class="pun">]*</span><span class="pln">b</span><span class="pun">[</span><span class="pln">k</span><span class="pun">][</span><span class="pln">j</span><span class="pun">];</span>
+            <span class="pun">}</span>
+
+    <span class="com">// Displaying the result</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"\nOutput Matrix:\n"</span><span class="pun">);</span>
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="pln">r1</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+        <span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">&lt;</span><span class="pln">c2</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">j</span><span class="pun">)</span>
+        <span class="pun">{</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%d  "</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">[</span><span class="pln">i</span><span class="pun">][</span><span class="pln">j</span><span class="pun">]);</span>
+            <span class="kwd">if</span><span class="pun">(</span><span class="pln">j </span><span class="pun">==</span><span class="pln"> c2</span><span class="pun">-</span><span class="lit">1</span><span class="pun">)</span><span class="pln">
+                printf</span><span class="pun">(</span><span class="str">"\n\n"</span><span class="pun">);</span>
+        <span class="pun">}</span>
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter rows and column for first matrix: 3
+2
+Enter rows and column for second matrix: 3
+2
+Error! column of first matrix not equal to row of second.
+
+Enter rows and column for first matrix: 2
+3
+Enter rows and column for second matrix: 3
+2
+
+Enter elements of matrix 1:
+Enter elements a11: 3
+Enter elements a12: -2
+Enter elements a13: 5
+Enter elements a21: 3
+Enter elements a22: 0
+Enter elements a23: 4
+
+Enter elements of matrix 2:
+Enter elements b11: 2
+Enter elements b12: 3
+Enter elements b21: -9
+Enter elements b22: 0
+Enter elements b31: 0
+Enter elements b32: 4
+
+Output Matrix:
+24  29
+
+6  25</samp></pre>

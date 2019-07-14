@@ -1,0 +1,30 @@
+<h2>Program to Check Palindrome</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> n</span><span class="pun">,</span><span class="pln"> reversedInteger </span><span class="pun">=</span> <span class="lit">0</span><span class="pun">,</span><span class="pln"> remainder</span><span class="pun">,</span><span class="pln"> originalInteger</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n</span><span class="pun">);</span><span class="pln">
+
+    originalInteger </span><span class="pun">=</span><span class="pln"> n</span><span class="pun">;</span>
+
+    <span class="com">// reversed integer is stored in variable </span>
+    <span class="kwd">while</span><span class="pun">(</span><span class="pln"> n</span><span class="pun">!=</span><span class="lit">0</span> <span class="pun">)</span>
+    <span class="pun">{</span><span class="pln">
+        remainder </span><span class="pun">=</span><span class="pln"> n</span><span class="pun">%</span><span class="lit">10</span><span class="pun">;</span><span class="pln">
+        reversedInteger </span><span class="pun">=</span><span class="pln"> reversedInteger</span><span class="pun">*</span><span class="lit">10</span> <span class="pun">+</span><span class="pln"> remainder</span><span class="pun">;</span><span class="pln">
+        n </span><span class="pun">/=</span> <span class="lit">10</span><span class="pun">;</span>
+    <span class="pun">}</span>
+
+    <span class="com">// palindrome if orignalInteger and reversedInteger are equal</span>
+    <span class="kwd">if</span> <span class="pun">(</span><span class="pln">originalInteger </span><span class="pun">==</span><span class="pln"> reversedInteger</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is a palindrome."</span><span class="pun">,</span><span class="pln"> originalInteger</span><span class="pun">);</span>
+    <span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is not a palindrome."</span><span class="pun">,</span><span class="pln"> originalInteger</span><span class="pun">);</span>
+    
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter an integer: 1001
+1001 is a palindrome.</samp></pre>

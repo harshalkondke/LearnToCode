@@ -1,0 +1,19 @@
+<header class="entry-header">
+<h2 class="entry-title">Interfaces in Java</h2>
+</header>
+<div class="entry-content">
+<p>Like a class, an interface can have methods and variables, but the methods declared in interface are by default abstract (only method signature, no body). &nbsp;</p>
+<ul>
+<li>Interfaces specify what a class must do and not how. It is the blueprint of the class.</li>
+<li>An Interface is about capabilities like a Player may be an interface and any class implementing Player must be able to (or must implement) move(). So it specifies a set of methods that the class has to implement.</li>
+<li>If a class implements an interface and does not provide method bodies for all functions specified in the interface, then class must be declared abstract.</li>
+<li>A Java library example is, Comparator Interface. If a class implements this interface, then it can be used to sort a collection.</li>
+</ul>
+<p>&nbsp;</p>
+<h2>Program :</h2>
+<p>&nbsp;</p>
+<p>import java.io.*;<br />interface bike{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public int id = 10;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void display();</p>
+<p>}</p>
+<p>class Interface implements bike{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void display(){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println("In Interface class"); <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static void main(String args[]){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interface inter = new Interface ();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inter.display();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(id);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />}</p>
+</div>

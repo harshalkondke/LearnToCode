@@ -1,0 +1,35 @@
+<h2>Program to Check Leap Year</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> year</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter a year: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">year</span><span class="pun">);</span>
+
+    <span class="kwd">if</span><span class="pun">(</span><span class="pln">year</span><span class="pun">%</span><span class="lit">4</span> <span class="pun">==</span> <span class="lit">0</span><span class="pun">)</span>
+    <span class="pun">{</span>
+        <span class="kwd">if</span><span class="pun">(</span><span class="pln"> year</span><span class="pun">%</span><span class="lit">100</span> <span class="pun">==</span> <span class="lit">0</span><span class="pun">)</span>
+        <span class="pun">{</span>
+            <span class="com">// year is divisible by 400, hence the year is a leap year</span>
+            <span class="kwd">if</span> <span class="pun">(</span><span class="pln"> year</span><span class="pun">%</span><span class="lit">400</span> <span class="pun">==</span> <span class="lit">0</span><span class="pun">)</span><span class="pln">
+                printf</span><span class="pun">(</span><span class="str">"%d is a leap year."</span><span class="pun">,</span><span class="pln"> year</span><span class="pun">);</span>
+            <span class="kwd">else</span><span class="pln">
+                printf</span><span class="pun">(</span><span class="str">"%d is not a leap year."</span><span class="pun">,</span><span class="pln"> year</span><span class="pun">);</span>
+        <span class="pun">}</span>
+        <span class="kwd">else</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%d is a leap year."</span><span class="pun">,</span><span class="pln"> year </span><span class="pun">);</span>
+    <span class="pun">}</span>
+    <span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is not a leap year."</span><span class="pun">,</span><span class="pln"> year</span><span class="pun">);</span>
+    
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code><samp> </samp></pre>
+<p><strong>Output 1</strong></p>
+<pre><samp>Enter a year: 1900
+1900 is not a leap year.
+<br /><br /></samp></pre>
+<p><strong>Output 2</strong></p>
+<pre><samp>Enter a year: 2012
+2012 is a leap year.</samp></pre>

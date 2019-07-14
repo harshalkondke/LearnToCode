@@ -1,0 +1,69 @@
+<h2>#1</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">double</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter three different numbers: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf %lf %lf"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n1</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n2</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n3</span><span class="pun">);</span>
+
+    <span class="kwd">if</span><span class="pun">(</span><span class="pln"> n1</span><span class="pun">&gt;=</span><span class="pln">n2 </span><span class="pun">&amp;&amp;</span><span class="pln"> n1</span><span class="pun">&gt;=</span><span class="pln">n3 </span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%.2f is the largest number."</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">);</span>
+
+    <span class="kwd">if</span><span class="pun">(</span><span class="pln"> n2</span><span class="pun">&gt;=</span><span class="pln">n1 </span><span class="pun">&amp;&amp;</span><span class="pln"> n2</span><span class="pun">&gt;=</span><span class="pln">n3 </span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%.2f is the largest number."</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">);</span>
+
+    <span class="kwd">if</span><span class="pun">(</span><span class="pln"> n3</span><span class="pun">&gt;=</span><span class="pln">n1 </span><span class="pun">&amp;&amp;</span><span class="pln"> n3</span><span class="pun">&gt;=</span><span class="pln">n2 </span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%.2f is the largest number."</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code><br /><br /><br /></pre>
+<h2>&nbsp;#2</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">double</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter three numbers: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf %lf %lf"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n1</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n2</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n3</span><span class="pun">);</span>
+
+    <span class="kwd">if</span> <span class="pun">(</span><span class="pln">n1</span><span class="pun">&gt;=</span><span class="pln">n2</span><span class="pun">)</span>
+    <span class="pun">{</span>
+        <span class="kwd">if</span><span class="pun">(</span><span class="pln">n1</span><span class="pun">&gt;=</span><span class="pln">n3</span><span class="pun">)</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%.2lf is the largest number."</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">);</span>
+        <span class="kwd">else</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%.2lf is the largest number."</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">);</span>
+    <span class="pun">}</span>
+    <span class="kwd">else</span>
+    <span class="pun">{</span>
+        <span class="kwd">if</span><span class="pun">(</span><span class="pln">n2</span><span class="pun">&gt;=</span><span class="pln">n3</span><span class="pun">)</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%.2lf is the largest number."</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">);</span>
+        <span class="kwd">else</span><span class="pln">
+            printf</span><span class="pun">(</span><span class="str">"%.2lf is the largest number."</span><span class="pun">,</span><span class="pln">n3</span><span class="pun">);</span>
+    <span class="pun">}</span>
+    
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p>&nbsp;</p>
+<div id="block-inject-1" class="block-inject block-inject-1">&nbsp;
+<h2>&nbsp;#3</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">double</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter three numbers: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%lf %lf %lf"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n1</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n2</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">n3</span><span class="pun">);</span>
+
+    <span class="kwd">if</span><span class="pun">(</span><span class="pln"> n1</span><span class="pun">&gt;=</span><span class="pln">n2 </span><span class="pun">&amp;&amp;</span><span class="pln"> n1</span><span class="pun">&gt;=</span><span class="pln">n3</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%.2lf is the largest number."</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">);</span>
+
+    <span class="kwd">else</span> <span class="kwd">if</span> <span class="pun">(</span><span class="pln">n2</span><span class="pun">&gt;=</span><span class="pln">n1 </span><span class="pun">&amp;&amp;</span><span class="pln"> n2</span><span class="pun">&gt;=</span><span class="pln">n3</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%.2lf is the largest number."</span><span class="pun">,</span><span class="pln"> n2</span><span class="pun">);</span>
+
+    <span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%.2lf is the largest number."</span><span class="pun">,</span><span class="pln"> n3</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+</div>

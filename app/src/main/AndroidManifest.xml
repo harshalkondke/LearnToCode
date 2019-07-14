@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="oopm.java.program">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/main_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/main_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2724342829182540~5075051334"/>
+
+        <activity android:name=".MainActivityActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DesActivity" />
+        <activity android:name=".AboutUs" />
+        <activity android:name=".ViewList" />
+        <activity android:name=".Cprogram" />
+        <activity android:name=".Javaprogram" />
+        <activity android:name=".Pythonprogram" />
+        <activity android:name=".RequestProgram"></activity>
+    </application>
+
+</manifest>

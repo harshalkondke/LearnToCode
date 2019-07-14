@@ -1,0 +1,27 @@
+<h2>Program to Demonstrate the Working of long</h2>
+<pre class="prettyprint prettyprinted" title="Program to find the size of int, long int and long long int."><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> a</span><span class="pun">;</span>
+    <span class="kwd">long</span><span class="pln"> b</span><span class="pun">;</span>
+    <span class="kwd">long</span> <span class="kwd">long</span><span class="pln"> c</span><span class="pun">;</span>
+
+    <span class="kwd">double</span><span class="pln"> e</span><span class="pun">;</span>
+    <span class="kwd">long</span> <span class="kwd">double</span><span class="pln"> f</span><span class="pun">;</span><span class="pln">
+
+
+    printf</span><span class="pun">(</span><span class="str">"Size of int = %ld bytes \n"</span><span class="pun">,</span> <span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">a</span><span class="pun">));</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Size of long = %ld bytes\n"</span><span class="pun">,</span> <span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">b</span><span class="pun">));</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Size of long long = %ld bytes\n"</span><span class="pun">,</span> <span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">c</span><span class="pun">));</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Size of double = %ld bytes\n"</span><span class="pun">,</span> <span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">e</span><span class="pun">));</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"Size of long double = %ld bytes\n"</span><span class="pun">,</span> <span class="kwd">sizeof</span><span class="pun">(</span><span class="pln">f</span><span class="pun">));</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre>Size of int = 4 bytes 
+Size of long = 8 bytes
+Size of long long = 8 bytes
+Size of double = 8 bytes
+Size of long double = 16 bytes</pre>

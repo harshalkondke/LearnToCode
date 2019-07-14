@@ -1,0 +1,34 @@
+<h2>#1: Program to Check Even or Odd</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> number</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">number</span><span class="pun">);</span>
+
+    <span class="com">// True if the number is perfectly divisible by 2</span>
+    <span class="kwd">if</span><span class="pun">(</span><span class="pln">number </span><span class="pun">%</span> <span class="lit">2</span> <span class="pun">==</span> <span class="lit">0</span><span class="pun">)</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is even."</span><span class="pun">,</span><span class="pln"> number</span><span class="pun">);</span>
+    <span class="kwd">else</span><span class="pln">
+        printf</span><span class="pun">(</span><span class="str">"%d is odd."</span><span class="pun">,</span><span class="pln"> number</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter an integer: -7
+-7 is odd.</samp></pre>
+<h2>&nbsp;</h2>
+<h2>#2: Program to Check Odd or Even Using Conditional Operator</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">int</span><span class="pln"> number</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter an integer: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,</span> <span class="pun">&amp;</span><span class="pln">number</span><span class="pun">);</span>
+
+    <span class="pun">(</span><span class="pln">number </span><span class="pun">%</span> <span class="lit">2</span> <span class="pun">==</span> <span class="lit">0</span><span class="pun">)</span> <span class="pun">?</span><span class="pln"> printf</span><span class="pun">(</span><span class="str">"%d is even."</span><span class="pun">,</span><span class="pln"> number</span><span class="pun">)</span> <span class="pun">:</span><span class="pln"> printf</span><span class="pun">(</span><span class="str">"%d is odd."</span><span class="pun">,</span><span class="pln"> number</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>

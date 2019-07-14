@@ -1,0 +1,22 @@
+<h2>Copy String Manually Without Using strcpy()</h2>
+<pre class="prettyprint prettyprinted"><code><span class="com">#include</span> <span class="str">&lt;stdio.h&gt;</span>
+<span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+    <span class="kwd">char</span><span class="pln"> s1</span><span class="pun">[</span><span class="lit">100</span><span class="pun">],</span><span class="pln"> s2</span><span class="pun">[</span><span class="lit">100</span><span class="pun">],</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+
+    printf</span><span class="pun">(</span><span class="str">"Enter string s1: "</span><span class="pun">);</span><span class="pln">
+    scanf</span><span class="pun">(</span><span class="str">"%s"</span><span class="pun">,</span><span class="pln">s1</span><span class="pun">);</span>
+
+    <span class="kwd">for</span><span class="pun">(</span><span class="pln">i </span><span class="pun">=</span> <span class="lit">0</span><span class="pun">;</span><span class="pln"> s1</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span> <span class="pun">!=</span> <span class="str">'\0'</span><span class="pun">;</span> <span class="pun">++</span><span class="pln">i</span><span class="pun">)</span>
+    <span class="pun">{</span><span class="pln">
+        s2</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span> <span class="pun">=</span><span class="pln"> s1</span><span class="pun">[</span><span class="pln">i</span><span class="pun">];</span>
+    <span class="pun">}</span><span class="pln">
+
+    s2</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span> <span class="pun">=</span> <span class="str">'\0'</span><span class="pun">;</span><span class="pln">
+    printf</span><span class="pun">(</span><span class="str">"String s2: %s"</span><span class="pun">,</span><span class="pln"> s2</span><span class="pun">);</span>
+
+    <span class="kwd">return</span> <span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre><samp>Enter String s1: iloveprogramming
+String s2: iloveprogramming</samp></pre>
